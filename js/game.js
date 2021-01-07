@@ -116,7 +116,7 @@ Player.prototype.step = function(dt) { //commands for keyboard controls
 
   // Determines player's rate of fire and speed. Also determines where the missile shoots from.
 
-  if(Game.keys['fire' ] || touches.length > 0 && this.reloading <= 0 && this.board.missiles < 10 )  {
+  if(Game.keys['fire' ] && this.reloading <= 0 && this.board.missiles < 10 )  {
     GameAudio.play('fire');
     this.board.addSprite('missile',
                           this.x + this.w/2 - Sprites.map.missile.w/2,
