@@ -101,10 +101,10 @@ Player.prototype.die = function() { //funtion linked with audio
 }
 
 Player.prototype.step = function(dt) { //commands for keyboard controls
-  if(Game.keys['left'] || touches.length > 0  ) { this.x -= 100 * dt; touches=[] }
-  if(Game.keys['right']||touches.length > 0) { this.x += 100 * dt; touches=[]}
-  if(Game.keys['up'] || touches.length > 0) { this.y -= 100 * dt; touches=[]}
-  if(Game.keys['down'] || touches.length > 0) { this.y += 100 * dt; touches=[]}
+  if(Game.keys['left']) { this.x -= 100 * dt; }
+  if(Game.keys['right']) { this.x += 100 * dt; }
+  if(Game.keys['up'] ) { this.y -= 100 * dt; }
+  if(Game.keys['down'] ) { this.y += 100 * dt;}
 
 
   if(this.x < 0) this.x = 0; //player contraints
